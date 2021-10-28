@@ -1,0 +1,25 @@
+﻿{
+  "IdentityData": {
+    "Roles": [
+      {
+        "Name": "Admin"
+      }
+    ],
+    "Users": [
+      {
+        "Username": "admin",
+        "Password": "00Aks+Liv00",
+        "Email": "felipefcosta.code@outlook.com",
+        "Roles": [
+          "Admin"
+        ],
+        "Claims": [
+          {
+            "Type": "name",
+            "Value": "admin"
+          }
+        ]
+      }
+    ]
+  }
+}

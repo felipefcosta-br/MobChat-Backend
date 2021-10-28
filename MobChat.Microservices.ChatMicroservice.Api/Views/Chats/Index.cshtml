@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MobChat.Microservices.ChatMicroservice.Domain.AggregatesModel.ChatAggregate.Chat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstMemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstMemberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstMemberPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondMemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondMemberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondMemberPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstMessageDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastMessageDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOnline)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMemberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMemberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMemberPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMemberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMemberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMemberPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMessageDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastMessageDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOnline)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

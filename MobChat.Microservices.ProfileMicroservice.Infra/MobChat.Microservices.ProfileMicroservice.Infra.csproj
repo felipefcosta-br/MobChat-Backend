@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobChat.Common.Infra.DataAccess\MobChat.Common.Infra.DataAccess.csproj" />
+    <ProjectReference Include="..\MobChat.Microservices.ProfileMicroservice.Domain\MobChat.Microservices.ProfileMicroservice.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

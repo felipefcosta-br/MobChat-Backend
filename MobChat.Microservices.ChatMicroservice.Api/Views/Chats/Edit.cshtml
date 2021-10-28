@@ -1,0 +1,79 @@
+﻿@model MobChat.Microservices.ChatMicroservice.Domain.AggregatesModel.ChatAggregate.Chat
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Chat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstMemberId" class="control-label"></label>
+                <input asp-for="FirstMemberId" class="form-control" />
+                <span asp-validation-for="FirstMemberId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstMemberName" class="control-label"></label>
+                <input asp-for="FirstMemberName" class="form-control" />
+                <span asp-validation-for="FirstMemberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstMemberPhoto" class="control-label"></label>
+                <input asp-for="FirstMemberPhoto" class="form-control" />
+                <span asp-validation-for="FirstMemberPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondMemberId" class="control-label"></label>
+                <input asp-for="SecondMemberId" class="form-control" />
+                <span asp-validation-for="SecondMemberId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondMemberName" class="control-label"></label>
+                <input asp-for="SecondMemberName" class="form-control" />
+                <span asp-validation-for="SecondMemberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondMemberPhoto" class="control-label"></label>
+                <input asp-for="SecondMemberPhoto" class="form-control" />
+                <span asp-validation-for="SecondMemberPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstMessageDate" class="control-label"></label>
+                <input asp-for="FirstMessageDate" class="form-control" />
+                <span asp-validation-for="FirstMessageDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastMessageDate" class="control-label"></label>
+                <input asp-for="LastMessageDate" class="form-control" />
+                <span asp-validation-for="LastMessageDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsOnline" /> @Html.DisplayNameFor(model => model.IsOnline)
+                </label>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

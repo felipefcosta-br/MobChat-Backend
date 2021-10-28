@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MobChat.Microservices.ChatMicroservice.Domain.AggregatesModel.TextMessageAggregate.TextMessage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceiverId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceiverName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceiverPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceiverId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceiverName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceiverPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
